@@ -1,9 +1,12 @@
 # vuex-shop
 
-## Магазин Vue.js c использованием Vuex и Vue-Router
+### Магазин Vue.js c использованием Vuex и Vue-Router
 
-![Untitled](src/assets/images/catalog.png)
+## Каталог
+![Untitled](src/assets/images/readme/catalog.png)
 
-![Untitled](src/assets/images/liked.png)
+## Избранное
+![Untitled](src/assets/images/readme/liked.png)
 
-![Untitled](src/assets/images/cart.png)
+## Корзина
+![Untitled](src/assets/images/readme/cart.png)

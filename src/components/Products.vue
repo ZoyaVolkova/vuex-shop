@@ -4,7 +4,7 @@
       <li v-for="product in products" :key="product.uid" class="product_item">
         <img :src="product.src" class="item_image" />
         <span class="item_name">{{ product.dish }}</span>
-        <span class="item_price">{{ product.price + " руб." }}</span>
+        <span class="item_price">{{ product.price + " $" }}</span>
 
         <div class="product_actions">
           <button
@@ -13,7 +13,7 @@
             class="button item_button add_button"
             @click="addToCart(product)"
           >
-            Добавить
+            Add
           </button>
           <div v-else>
             <button
@@ -41,7 +41,20 @@
             class="button item_button like_button"
             @click="addToLiked(product)"
           >
-            В избранное
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              role="img"
+              width="2em"
+              height="2em"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 48 48"
+            >
+              <path
+                fill="#FFCDD2"
+                d="M34 9c-4.2 0-7.9 2.1-10 5.4C21.9 11.1 18.2 9 14 9C7.4 9 2 14.4 2 21c0 11.9 22 24 22 24s22-12 22-24c0-6.6-5.4-12-12-12z"
+              />
+            </svg>
           </button>
           <button
             v-if="product.liked === 'yes'"
@@ -49,7 +62,20 @@
             class="button item_button remove_like_button"
             @click="removeFromLiked(product)"
           >
-            Удалить из избранного
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              role="img"
+              width="2em"
+              height="2em"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 48 48"
+            >
+              <path
+                fill="#F44336"
+                d="M34 9c-4.2 0-7.9 2.1-10 5.4C21.9 11.1 18.2 9 14 9C7.4 9 2 14.4 2 21c0 11.9 22 24 22 24s22-12 22-24c0-6.6-5.4-12-12-12z"
+              />
+            </svg>
           </button>
         </div>
       </li>
@@ -108,13 +134,12 @@ export default {
   padding: 10px;
 }
 .button {
-  background: #fff;
-  border: 1px solid #35a2c7;
   border-radius: 4px;
-}
-.button:hover {
   background: #35a2c7;
   color: #fff;
+  border: none;
+}
+.button:hover {
   border: none;
   cursor: pointer;
 }
@@ -133,10 +158,15 @@ export default {
   width: 30px;
   height: 30px;
 }
-.remove_like_button,
-.like_button,
+
 .add_button {
   width: 120px;
   height: 42px;
+}
+.remove_like_button,
+.like_button {
+  width: 42px;
+  height: 42px;
+  background-color: transparent;
 }
 </style>

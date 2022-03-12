@@ -1,9 +1,9 @@
 <template>
   <div>
-    <h3>Корзина</h3>
+    <h3>Cart</h3>
     <div v-show="!products.length">
-      <p>Ваша корзина пуста!</p>
-      <router-link to="/">Продолжить покупки</router-link>
+      <p>Your cart is empty!</p>
+      <router-link to="/">Continue shopping</router-link>
     </div>
 
     <div v-show="products.length">
@@ -11,8 +11,8 @@
         <div v-for="p in products" :key="p.uid">
           <div class="cart_item">
             <span>{{ p.dish }}</span>
-            <span>Количество: {{ p.quantity }}</span>
-            <span> {{ p.price * p.quantity }} руб.</span>
+            <span>Quantity: {{ p.quantity }}</span>
+            <span> {{ p.price * p.quantity }} $ </span>
             <div>
               <button
                 type="button"
@@ -33,13 +33,13 @@
         </div>
       </div>
       <span class="total"
-        >Общая сумма:
-        {{ new Intl.NumberFormat("ru-RU").format(total) }} руб.</span
+        >Total amount:
+        {{ new Intl.NumberFormat("ru-RU").format(total) }} $</span
       >
     </div>
 
     <button v-show="products.length" @click="checkout" class="checkout">
-      Оформить
+      Checkout
     </button>
   </div>
 </template>

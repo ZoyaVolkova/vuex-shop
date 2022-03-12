@@ -2,11 +2,11 @@
 
 ### Vue.js online store using Vuex and Vue-Router
 
-## Каталог
+## Catalog
 ![Untitled](src/assets/images/readme/catalog.png)
 
-## Избранное
+## Favorites
 ![Untitled](src/assets/images/readme/liked.png)
 
-## Корзина
+## Cart
 ![Untitled](src/assets/images/readme/cart.png)

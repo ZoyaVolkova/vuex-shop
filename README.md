@@ -1,6 +1,6 @@
 # vuex-shop
 
-### Магазин Vue.js c использованием Vuex и Vue-Router
+### Vue.js online store using Vuex and Vue-Router
 
 ## Каталог
 ![Untitled](src/assets/images/readme/catalog.png)
